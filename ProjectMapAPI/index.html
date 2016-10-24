@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #font {
+            font-family: 'EB Garamond', serif;
+        }
+
+        #map {
+            height: 700px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="font">AnglerPedia Google Maps Demo</h1>
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            var uluru = {
+                lat: 40.014,
+                lng: -105.260
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 13,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9RoYJaotgGYqXGnahTM0SOmQsQRdJ8wA&callback=initMap">
+    </script>
+</body>
+
+</html>
