@@ -2,38 +2,150 @@
 <html>
 
 <head>
+    <!-- For browser viewing of different devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Tab title and icon -->
+    <title> AnglerPedia </title>
+    <link rel="icon" href="anglerpedia-favicon.png"/>
+    <!-- Bootstrap for html (a.k.a webpage frontend "template")-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" \
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Google Font reference link -->
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat"/>
+    <!-- CSS, stylesheet, can be create on a seperate folder in the future-->
     <style>
+        /* bootstrap for Javascript */
+        @import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');
+        /* webpage font */
         #font {
-            font-family: 'EB Garamond', serif;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            position: relative;
+            margin: 10px;
+            padding: 50px;
+            text-align: center;
         }
 
+        h2 {
+            font-size: 50pt;
+            position: absolute;
+            top: 100px;
+            left: 400px;
+            width: 100%;
+        }
+
+        h2 span {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            background: rgb(0,0,0);
+            background: rgba(0,0,0,0.1);
+        }
+        /* map size */
         #map {
             height: 700px;
+            width: 90%;
+            margin: 0 auto 0 auto;
+        }
+
+        .intro img{
+            position: relative;;
+            height: 100%;
             width: 100%;
         }
     </style>
 </head>
 
 <body>
-    <h1 id="font">AnglerPedia Google Maps Demo</h1>
+    <!-- Contain of the webpage -->
+    <div class="intro">
+        <img src="fishing-background2-crop.jpeg" alt="headimage"/>
+        <img src="anglerpedia-favicon.png" style="position: absolute; opacity: 0.8; top: 30px; left: 70px; width: 300px; height: 300px;"/>
+        <h2> <span> AnglerPedia<br/>Your No. 1 Fishing Companion </span> </h2>
+    </div>
+
+    <h1 id="font">AnglerPedia Google Maps Demo <span class="glyphicon glyphicon-search"></span> </h1>
+
     <div id="map"></div>
     <script>
+    // Javascript for the map: uluru is the marker location with lat and long
         function initMap() {
-            var uluru = {
-                lat: 40.014,
-                lng: -105.260
+            var here = {
+                lat: 40.0087,
+                lng: -105.2709
             };
+
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 13,
-                center: uluru
+                center: here
             });
+
+            var icons = {
+                water: {
+                    icon: 'anglerpedia-marker.png'
+                }
+            };
+
+            function addMarker(features) {
+                var marker = new google.maps.Marker({
+                    position: feature.position,
+                    icon: icons[feature.type].icon,
+                    map: map,
+                    //title: feature.title
+                });
+                var infowindow = new google.maps.InfoWindow({
+                    content: feature.title
+                });
+            }
+
+            var features = [
+                {
+                    // Gross Reservoir
+                    position: new google.maps.LatLng(39.9510,-105.3614),
+                    type:'water',
+                    title: '<p>Gross Reservoir</p>'
+                },
+                {
+                    // Boulder Reservoir
+                    position: new google.maps.LatLng(40.0779,-105.2226),
+                    type:'water',
+                    title: 'Boulder Reservoir'
+                },
+                {
+                    // North Boulder Creek
+                    position: new google.maps.LatLng(40.0134,-105.2953),
+                    type:'water',
+                    title: 'North Boulder Creek'
+                },
+                {
+                    // Viele Lake
+                    position: new google.maps.LatLng(39.9721,-105.2491),
+                    type:'water',
+                    title: 'Viele Lake'
+                },
+            ];
+
+            var contentString = '<p> I am here. Self note: This is a custom-defined \
+            location. HTML5 Geolocation failed because of permission. </p>';
+
+            var infowindow = new google.maps.InfoWindow({
+              content: contentString
+            });
+
+            for (var i=0, feature; feature = features[i]; i++) {
+                addMarker(feature);
+            }
+
             var marker = new google.maps.Marker({
-                position: uluru,
-                map: map
+                position: here,
+                map: map,
+            });
+            marker.addListener('click',function() {
+                infowindow.open(map, marker);
             });
         }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9RoYJaotgGYqXGnahTM0SOmQsQRdJ8wA&callback=initMap">
+    // Javascript: Google Map API. You can't use this link, you need to request a new API address from Google for a different website
     </script>
 </body>
 
