@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Anglerpedia</title>
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+</head>
+<body id="top">
+<div class="wrapper col2">
+ 		<img src="images/headernew.png" alt="HTML5 Icon"  align="middle">
+</div>
+
+  </div>
+</div>
+<div class="wrapper col3">
+  <div id="intro">
+    <div class="box1">
+      <h2>Company Goals</h2>
+      <p>Our goal is to centralize and consolidate fishing information, thereby
+        increasing information accessibility and angler satisfaction. With an
+        interactive web page, users will be able to create profiles for themselves
+        and record information
+          about fish caught at specific locations, discover new fishing spots
+          and search for rivers, streams and lakes containing specific varieties of fish.
+        </p>
+		<br class="clear" />
+
+    </div>
+    <div class="box">
+      <h2>Welcome to Anglerpedia!</h2>
+      <p>
+        Use our app to explore the fishing locations and the species of fish that
+        you're looking for.
+      </p>
+		<br class="clear" />
+    </div>
+    <div class="box">
+      <h2>Best Catch this week</h2>
+      <p> One of our developers caught a Rainbow trout weight 20 pounds and 16 inches from
+        Boulder Creek!
+        <img class="imgl" src="images/rainbowtrout.jpg"/>
+		  <br class="clear" />
+    </div>
+
+    </div>
+    <br class="clear" />
+    <br class="clear" />
+</div>
+</div>
+
+<div class="w3-container w3-black">
+	<h1><center>Map</center></h1>
+</div>
+<div class="wrapper col4">
+	<div class="overview">
+		<link rel="icon" href="anglerpedia-favicon.png"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" \
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat"/>
+	<style>
+        /* bootstrap for Javascript */
+        @import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');
+        /* webpage font */
+        #font {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            position: relative;
+            margin: 10px;
+            padding: 50px;
+            text-align: center;
+        }
+
+
+        h2 span {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            background: rgb(0,0,0);
+            background: rgba(0,0,0,0.1);
+        }
+        /* map size */
+        #map {
+            height: 700px;
+            width: 90%;
+            margin: 0 auto 0 auto;
+        }
+
+        .intro img{
+            position: relative;;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            var here = {
+                lat: 40.0087,
+                lng: -105.2709
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 13,
+                center: here
+            });
+
+            var icons = {
+                water: {
+                    icon: 'anglerpedia-marker.png'
+                }
+            };
+
+            function addMarker(features) {
+                var marker = new google.maps.Marker({
+                    position: feature.position,
+                    icon: icons[feature.type].icon,
+                    map: map,
+                    //title: feature.title
+                });
+                var infowindow = new google.maps.InfoWindow({
+                    content: feature.title
+                });
+            }
+
+            var features = [
+                {
+                    // Gross Reservoir
+                    position: new google.maps.LatLng(39.9510,-105.3614),
+                    type:'water',
+                    title: '<p>Gross Reservoir</p>'
+                },
+                {
+                    // Boulder Reservoir
+                    position: new google.maps.LatLng(40.0779,-105.2226),
+                    type:'water',
+                    title: 'Boulder Reservoir'
+                },
+                {
+                    // North Boulder Creek
+                    position: new google.maps.LatLng(40.0134,-105.2953),
+                    type:'water',
+                    title: 'North Boulder Creek'
+                },
+                {
+                    // Viele Lake
+                    position: new google.maps.LatLng(39.9721,-105.2491),
+                    type:'water',
+                    title: 'Viele Lake'
+                },
+            ];
+
+            var contentString = '<p> I am here. Self note: This is a custom-defined \
+            location. HTML5 Geolocation failed because of permission. </p>';
+
+            var infowindow = new google.maps.InfoWindow({
+              content: contentString
+            });
+
+            for (var i=0, feature; feature = features[i]; i++) {
+                addMarker(feature);
+            }
+
+            var marker = new google.maps.Marker({
+                position: here,
+                map: map,
+            });
+            marker.addListener('click',function() {
+                infowindow.open(map, marker);
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9RoYJaotgGYqXGnahTM0SOmQsQRdJ8wA&callback=initMap">
+    </script>
+    <br class="clear" />
+  </div>
+</div>
+<div class="w3-container w3-black">
+	<h1><center>Fishing Regulations</center></h1>
+</div>
+<div class="wrapper col4">
+	<div class="overview">
+	<br>
+	<br>
+	<br>
+	<br>
+	</div>
+</div>
+<div class="w3-container w3-black">
+	<h1><center>News</center></h1>
+</div>
+<div class="wrapper col4">
+	<div class="overview">
+	<br>
+	<br>
+	<br>
+	<br>
+	</div>
+</div>
+<div class="w3-container w3-black">
+	<h1><center>Seasonal Calendar</center></h1>
+</div>
+<div class="wrapper col4">
+	<div class="overview">
+	<br>
+	<br>
+	<br>
+	<br>
+	</div>
+</div>
+
+<div class="wrapper col5">
+  <div id="footer">
+    <div class="box1">
+      <h2>Some information about us</h2>
+      <p>We are a group of developers who are passionate about fish.
+        Our goal is to centralize and consolidate fishing information, thereby 
+        increasing information accessibility and angler satisfaction. With an
+        interactive web page, users will be able to create profiles for themselves
+        and record information about fish caught at specific locations, discover
+        new fishing spots and search for rivers, streams and lakes containing
+        specific varieties of fish.</p>
+    </div>
+    <div class="box contactdetails">
+      <h2>Our Contact Details !</h2>
+      <ul>
+        <li>Company Name: Anglerpedia</li>
+        <li>Email: www.anglerpedia.us</li>
+		<li>University of Colorado Boulder</li>
+		<li>Regent Administrative Center</li>
+		<li>2055 Regent Drive, Rm. 101</li>
+		<li>Boulder, CO 80309-0020</li>
+      </ul>
+    </div>
+    <div class="box flickrbox">
+      <h2>Latest Catches!</h2>
+      <div class="wrap">
+        <div class="fix"></div>
+        <div class="flickr_badge_image"<a href="#"><img src="images/rainbowtrout.jpg" alt="" /></a></div>
+        <div class="flickr_badge_image"<a href="#"><img src="images/rainbowtrout.jpg" alt="" /></a></div>
+        <div class="flickr_badge_image"<a href="#"><img src="images/rainbowtrout.jpg" alt="" /></a></div>
+        <div class="flickr_badge_image"<a href="#"><img src="images/rainbowtrout.jpg" alt="" /></a></div>
+        <div class="flickr_badge_image"<a href="#"><img src="images/rainbowtrout.jpg" alt="" /></a></div>
+        <div class="flickr_badge_image"<a href="#"><img src="images/rainbowtrout.jpg" alt="" /></a></div>
+        <div class="fix"></div>
+      </div>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+
+<div class="w3-container w3-black">
+	<p class="fl_left">Copyright &copy; 2016 - All Rights Reserved Anglerpedia</p>
+</div>
+  </div>
+</div>
+</body>
+</html>

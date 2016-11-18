@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Anglerpedia</title>
+    <link rel="stylesheet" href="main.css" type="text/css" />
+</head>
+
+<body id="top">
+    <div class="wrapper col2">
+        <div id="header">
+            <div id="logo">
+                <h1><a href="index.html">Anglerpedia</a></h1>
+                <p>Your number one fishing companion.</p>
+            </div>
+            <div id="topnav">
+                <ul>
+                    <li><a href="#">Home</a><span></span></li>
+                    <li><a href="#">Fishing Regulations</a><span></span></li>
+                    <li class="#"><a href="#">News</a><span></span></li>
+                    <li class="#"><a href="#">Maps</a><span></span></li>
+                    <li><a href="pages/style-pics.html">Seasonal Calendar</a><span></span></li>
+                    <li class="#"><a href="pages/full-width.html">Who we are</a><span></span></li>
+                </ul>
+            </div>
+            <br class="clear" />
+        </div>
+    </div>
+    <div class="wrapper col3">
+        <div id="intro">
+            <div class="box1">
+                <h2>Objective</h2>
+                <p>Our goal is to centralize and consolidate fishing information, thereby increasing information accessibility and angler satisfaction. With an interactive web page, users will be able to create profiles for themselves and record information
+                    about fish caught at specific locations, discover new fishing spots and search for rivers, streams and lakes containing specific varieties of fish.
+                </p>
+            </div>
+            <div class="box">
+                <h2>Welcome to anglerpedia!</h2>
+                <ul>
+                        <li> test </li>
+                        <li> test </li>
+                        <li> test </li>
+                        <li> test </li>
+                        <li> test </li>
+                        <li> test </li>
+                        <li> test </li>
+                        <li> test </li>
+                        <li> test </li>
+                        <li class="last"> :D</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Best Catch this week</h2>
+                <ul>
+                    <li> test </li>
+                    <li> test </li>
+                    <li> test </li>
+                    <li> test </li>
+                    <li> test </li>
+                    <li> test </li>
+                    <li> test </li>
+                    <li> test </li>
+                    <li> test </li>
+
+                </ul>
+            </div>
+            <br class="clear" />
+        </div>
+    </div>
+
+    <div class="wrapper col4">
+        <div class="overview">
+            <h1 id="title"><center>Google Map Demo</center></h1>
+            <link rel="icon" href="anglerpedia-favicon.png" />
+            <!-- Bootstrap for html (a.k.a webpage frontend "template")-->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" \ integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            <!-- Google Font reference link -->
+            <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat" />
+            <!-- CSS, stylesheet, can be create on a seperate folder in the future-->
+            <style>
+                /* bootstrap for Javascript */
+
+                @import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');
+                /* webpage font */
+
+                #font {
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: bold;
+                    position: relative;
+                    margin: 10px;
+                    padding: 50px;
+                    text-align: center;
+                }
+
+                h2 span {
+                    color: white;
+                    font-family: 'Montserrat', sans-serif;
+                    background: rgb(0, 0, 0);
+                    background: rgba(0, 0, 0, 0.1);
+                }
+                /* map size */
+
+                #map {
+                    height: 700px;
+                    width: 90%;
+                    margin: 0 auto 0 auto;
+                }
+
+                .intro img {
+                    position: relative;
+                    ;
+                    height: 100%;
+                    width: 100%;
+                }
+            </style>
+            </head>
+
+            <body>
+                <div id="map"></div>
+                <script>
+                    // Javascript for the map: uluru is the marker location with lat and long
+                    function initMap() {
+                        var here = {
+                            lat: 40.0087,
+                            lng: -105.2709
+                        };
+
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 13,
+                            center: here
+                        });
+
+                        var icons = {
+                            water: {
+                                icon: 'anglerpedia-marker.png'
+                            }
+                        };
+
+                        function addMarker(features) {
+                            var marker = new google.maps.Marker({
+                                position: feature.position,
+                                icon: icons[feature.type].icon,
+                                map: map,
+                                //title: feature.title
+                            });
+                            var infowindow = new google.maps.InfoWindow({
+                                content: feature.title
+                            });
+                        }
+
+                        var features = [{
+                            // Gross Reservoir
+                            position: new google.maps.LatLng(39.9510, -105.3614),
+                            type: 'water',
+                            title: '<p>Gross Reservoir</p>'
+                        }, {
+                            // Boulder Reservoir
+                            position: new google.maps.LatLng(40.0779, -105.2226),
+                            type: 'water',
+                            title: 'Boulder Reservoir'
+                        }, {
+                            // North Boulder Creek
+                            position: new google.maps.LatLng(40.0134, -105.2953),
+                            type: 'water',
+                            title: 'North Boulder Creek'
+                        }, {
+                            // Viele Lake
+                            position: new google.maps.LatLng(39.9721, -105.2491),
+                            type: 'water',
+                            title: 'Viele Lake'
+                        }, ];
+
+                        var contentString = '<p> I am here. Self note: This is a custom-defined \
+            location. HTML5 Geolocation failed because of permission. </p>';
+
+                        var infowindow = new google.maps.InfoWindow({
+                            content: contentString
+                        });
+
+                        for (var i = 0, feature; feature = features[i]; i++) {
+                            addMarker(feature);
+                        }
+
+                        var marker = new google.maps.Marker({
+                            position: here,
+                            map: map,
+                        });
+                        marker.addListener('click', function() {
+                            infowindow.open(map, marker);
+                        });
+                    }
+                </script>
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9RoYJaotgGYqXGnahTM0SOmQsQRdJ8wA&callback=initMap">
+                    // Javascript: Google Map API. You can't use this link, you need to request a new API address from Google for a different website
+                </script>
+                <ul>
+                </ul>
+                <br class="clear" />
+        </div>
+    </div>
+    <div class="wrapper col5">
+        <div id="footer">
+            <div class="box1">
+                <h2>Some information about us</h2>
+                <img class="imgl" src="images/284x1442.png" />
+                <p>We are just a bunch of gibberfishes.</p>
+                <p>*bloop*</p>
+            </div>
+            <div class="box contactdetails">
+                <h2>Our Contact Details !</h2>
+                <ul>
+                    <li>Company Name: Anglerpedia</li>
+                    <li>Email: coming soon</li>
+                </ul>
+            </div>
+            <div class="box flickrbox">
+                <h2>Latest Catches!</h2>
+                <div class="wrap">
+                    <div class="fix"></div>
+                    <div class="flickr_badge_image" <a href="#"><img src="anglerpedia-favicon.png" alt="" /></a>
+                    </div>
+                    <div class="fix"></div>
+                </div>
+            </div>
+            <br class="clear" />
+        </div>
+    </div>
+    <div class="wrapper col6">
+        <div id="copyright">
+
+            <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved Anglerpedia</p>
+            <br class="clear" />
+
+        </div>
+    </div>
+    </body>
+
+</html>

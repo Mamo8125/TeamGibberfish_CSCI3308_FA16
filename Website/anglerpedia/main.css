@@ -1,0 +1,253 @@
+/*--------------------------------------Navbar-----------------------------*/
+#topnav{
+	display:block; 
+	float:right; 
+	width:435px; 
+	font-size:16px; 
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+#topnav ul{
+	margin:0; 
+	padding:0; 
+	list-style:none;
+}
+#topnav li{
+	display:block; 
+	float:left; 
+	width:125px; 
+	margin:10px 30px 10px 0; 
+	padding:0;
+}
+#topnav li.last{
+	margin-right:0;
+}
+#topnav li span{
+	margin-top:5px; 
+	float:left; 
+	font-size:12px; 
+	font-family:Arial, Helvetica, sans-serif; 
+	text-transform:lowercase; 
+	color:#999999; 
+	background-color:#222222;
+}
+#topnav li a:link, #topnav li a:visited, #topnav li a:hover{
+	color:#666666; 
+	background-color:#222222; 
+	text-transform:uppercase;
+}
+#topnav li a:hover, #topnav ul li.active a{
+	color:#60E1FD; 
+	background-color:#222222;
+}
+
+body{
+	margin:0; 
+	padding:0; 
+	font-size:20px; 
+	font-family:verdana, Arial, Helvetica, sans-serif; 
+	color:#FFFFFF; 
+	background-color:#333333;
+}
+
+a{
+	outline:none; 
+	text-decoration:none;
+}
+
+/* ----------------------------------------------Wrapper------------------------------------- */
+
+div.wrapper{
+	position:relative; 
+	float:left; 
+	width:100%; 
+	margin:0; 
+	text-align:left;
+}
+
+div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wrapper h6{
+	margin:0; 
+	padding:0; 
+	line-height:normal; 
+	font-weight:normal; 
+	font-size:18px; 
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+.col1{
+	color:#333333; 
+	background-color:#222222; 
+	border-bottom:1px dotted #666666;
+}
+.col2{
+	color:#D2D2D2; 
+	background-color:#222222;
+}
+.col3{
+	color:#666666; 
+	background-color:#F3F3F3;
+}
+.col4{
+	color:#333333; 
+	background-color:#FFFFFF;
+}
+.col5{
+	color:#FFFFFF; 
+	background-color:#000000;
+}
+
+
+/* ----------------------------------------------Generalise------------------------------------- */
+
+#header, #intro, .overview, #container, #footer{
+	position:relative; 
+	width:960px; 
+	margin:0 auto; 
+	text-align:left;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+	vertical-align: middle
+}
+
+.item {
+    width: 600px;
+    height: 600px;
+    height: auto;
+    float: right;
+    margin: 3px;
+    padding: 3px;
+}
+
+
+/* ----------------------------------------------Header------------------------------------- */
+
+#header{
+	padding:0 0 20px 0;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+#header h1, #header p{
+	margin:0; 
+	padding:0;
+}
+#header #logo{
+	display:block; 
+	float:left; 
+	width:260px; 
+	margin-top:18px;}
+#header h1{
+	margin:0 0 7px 0; 
+	font-size:56px; 
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+#header h1 a{
+	color:#F3F3F3; 
+	background-color:#222222;
+}
+#header p.toggler{
+	display:inline;
+}
+#header p.toggler a{
+	display:block; 
+	width:180px; 
+	padding:5px 0; 
+	text-align:center; 
+	text-transform:uppercase; 
+	color:#666666; 
+	background-color:#333333;
+}
+
+/* ----------------------------------------------Homepage Intro------------------------------------- */
+
+#intro{
+	padding:20px 0 10px 0;
+}
+#intro h2{
+	margin:0 0 15px 0; 
+	padding:0 0 8px 0; 
+	border-bottom:1px dotted #333333;
+}
+#intro ul{
+	margin:0; 
+	padding:0; 
+	list-style:none
+}
+#intro li{
+	margin-bottom:5px;
+}
+#intro li.last{
+	margin-bottom:0;
+}
+#intro .box{
+	display:block; 
+	float:right; 
+	width:250px; 
+	line-height:1.7em;
+	margin:0 0 0 25px; 
+	padding:0;
+}
+#intro .box1{
+	display:block; 
+	float:left; 
+	width:410px; 
+	line-height:1.7em;
+}	
+
+
+
+/* ----------------------------------------------Page Overview------------------------------------- */
+
+div.overview{
+	padding:20px 0 0 0;
+}
+.overview h1#title{
+	display:block; 
+	width:100%; 
+	margin-top:-20px; 
+	font-size:76px; 
+	letter-spacing:-2px; 
+	color:#DDDDDD; 
+	background-color:#FFFFFF;
+}
+.overview ul{
+	margin:0; 
+	padding:0; 
+	list-style:none;
+}
+
+
+/* ----------------------------------------------Footer------------------------------------- */
+
+#footer{
+	padding:15px 0;
+}
+#footer ul{
+	margin:0; 
+	padding:0; 
+	list-style:none;
+}
+#footer h2{
+	margin:0 0 15px 0; 
+	padding:0 0 8px 0; 
+	border-bottom:1px dotted #CCCCCC;}
+#footer .box{
+	display:block; 
+	float:right; 
+	width:250px; 
+	margin:0 0 0 25px; 
+	padding:0;}
+#footer .box1{
+	display:block; 
+	float:left; 
+	width:400px; 
+	line-height:1.6em;
+}
+
+
+
+#footer .flickrbox .wrap .flickr_badge_image{
+	display:block; 
+	float:left; 
+	margin:0 10px 10px 0; 
+	width:80px; 
+	height:80px;}
