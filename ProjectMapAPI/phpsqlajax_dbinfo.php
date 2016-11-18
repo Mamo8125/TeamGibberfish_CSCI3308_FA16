@@ -1,5 +1,5 @@
 <?php
-$username="";
-$password="";
-$database="";
+$username="root";
+$password="702874Nin";
+$database="gibberfishdatabase";
 ?>
