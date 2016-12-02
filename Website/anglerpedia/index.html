@@ -4,91 +4,44 @@
 <title>Anglerpedia</title>
 <link rel="stylesheet" href="main.css" type="text/css" />
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="icon" href="anglerpedia-favicon.png"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" \integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat"/>
 </head>
 <body id="top">
 <div class="wrapper col2">
- 		<img src="images/headernew.png" alt="HTML5 Icon"  align="middle">
-</div>
-
-  </div>
+ 		<img src="images/newheader.png" alt="HTML5 Icon"  align="middle">
 </div>
 <div class="wrapper col3">
-  <div id="intro">
-    <div class="box1">
-	<h2>Company Goals</h2>
-      <p>Our goal is to centralize and consolidate fishing information, thereby
-        increasing information accessibility and angler satisfaction. With an
-        interactive web page, users will be able to create profiles for themselves
-        and record informationabout fish caught at specific locations, discover new fishing spotsand search for rivers, streams and lakes containing specific varieties of fish.
-        </p>
-
-    </div>
-    <div class="box">
-      <h2>Welcome to Anglerpedia!</h2>
-      <p>
-        Use our app to explore the fishing locations and the species of fish that
-        you're looking for.
-      </p>
-		<br class="clear" />
-    </div>
-    <div class="box">
-      <h2>Best Catch this week</h2>
-      <p> One of our developers caught a Rainbow trout weight 20 pounds and 16 inches from
-        Boulder Creek!
-        <img class="imgl" src="images/rainbowtrout.jpg"/>
-		<br class="clear" />
-    </div>
-
-    </div>
-    <br class="clear" />
-    <br class="clear" />
-</div>
+	<div id="intro">
+		<div class="box1">
+			<h2>Company Goals</h2>
+			<p>Our goal is to centralize and consolidate fishing information, thereby increasing information accessibility and angler satisfaction. With an interactive web page, users will be able to create profiles for themselves and record informationabout fish caught at specific locations, discover new fishing spotsand search for rivers, streams and lakes containing specific varieties of fish.</p>
+		</div>
+		<div class="box">
+			<h2>Welcome to Anglerpedia!</h2>
+			<p>Use our app to explore the fishing locations and the species of fish that you're looking for.</p>
+		</div>
+		<div class="box">
+			<h2>Best Catch this week</h2>
+			<p> One of our developers caught a Rainbow trout weight 20 pounds and 16 inches from Boulder Creek!</p>
+			<img class="imgl" src="images/rainbowtrout.jpg"/>
+			<p>&nbsp</p>
+		</div>
+	</div>
 </div>
 
 <div class="w3-container w3-dark-grey">
-	<h1><center>Map</center></h1>
+	<h1>&nbsp</h1>
 </div>
+<div class="bgimg-1">
+	<div class="caption">
+		<span class="border">Map</span>
+	</div>
+</div>
+
 <div class="wrapper col4">
 	<div class="overview">
-		<link rel="icon" href="anglerpedia-favicon.png"/>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" \
-		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Montserrat"/>
-	<style>
-        /* bootstrap for Javascript */
-        @import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');
-        /* webpage font */
-        #font {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: bold;
-            position: relative;
-            margin: 10px;
-            padding: 50px;
-            text-align: center;
-        }
-	
-
-        h2 span {
-            color: white;
-            font-family: 'Montserrat', sans-serif;
-            background: rgb(0,0,0);
-            background: rgba(0,0,0,0.1);
-        }
-        /* map size */
-        #map {
-            height: 700px;
-            width: 90%;
-            margin: 0 auto 0 auto;
-        }
-
-        .intro img{
-            position: relative;;
-            height: 100%;
-            width: 100%;
-        }
-    </style>
-</head>
-
 <body>
     <div id="map"></div>
     <script>
@@ -101,13 +54,11 @@
                 zoom: 13,
                 center: here
             });
-
             var icons = {
                 water: {
                     icon: 'anglerpedia-marker.png'
                 }
             };
-
             function addMarker(features) {
                 var marker = new google.maps.Marker({
                     position: feature.position,
@@ -119,7 +70,6 @@
                     content: feature.title
                 });
             }
-
             var features = [
                 {
                     // Gross Reservoir
@@ -149,15 +99,12 @@
 
             var contentString = '<p> I am here. Self note: This is a custom-defined \
             location. HTML5 Geolocation failed because of permission. </p>';
-
             var infowindow = new google.maps.InfoWindow({
               content: contentString
             });
-
             for (var i=0, feature; feature = features[i]; i++) {
                 addMarker(feature);
             }
-
             var marker = new google.maps.Marker({
                 position: here,
                 map: map,
@@ -169,89 +116,136 @@
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9RoYJaotgGYqXGnahTM0SOmQsQRdJ8wA&callback=initMap">
     </script>
-    <br class="clear" />
+    <p>&nbsp;</p>
   </div>
 </div>
 <div class="w3-container w3-dark-grey">
-	<h1><center>Fishing Regulations</center></h1>
+	<h1>&nbsp</h1>
 </div>
-<div class="wrapper col4">
-	<div class="overview">
-	<br>
-	<br>
-	<br>
-	<br>
+<div class="bgimg-2">
+	<div class="caption">
+		<span class="border">Fishing Regulations</span>
 	</div>
 </div>
-<div class="w3-container w3-dark-grey">
-	<h1><center>News</center></h1>
-</div>
-<div class="wrapper col4">
-	<div class="overview">
-	<p>
-	For the first time, Smithsonian researchers and collaborators have designed a marine reserve network to protect species threatened by overfishing while boosting fishing yields on nearby fishing grounds, resolving a long-standing global "conserve or catch" conflict in marine conservation efforts.A team led by scientists from the Smithsonian's Marine Conservation Program report in the journal Conservation Letters Nov. 17 that they have designed a model network of marine reserves off the Caribbean coast of Honduras, which can support the long-term preservation of spiny lobsters within the country's waters while also increasing fishing yields of the species in fishing areas outside the reserves' borders."Placing marine reserves across existing fishing grounds can often be very contentious," said Stephen Box, senior author on the study and lead marine biologist of the Marine Conservation Program at the Smithsonian Marine Station in Fort Pierce, Fla., a marine biodiversity and ecosystem research center of the Smithsonian's National Museum of Natural History. "Fishers may oppose plans they see as taking away a large proportion of their fishing area, which could threaten their income without clear benefits being apparent. Our design approach resolves this point of tension showing that it is possible to design reserve networks that provide measurable benefits to fishers, improving catches while sustaining the target population. This really is important as it can help align fisheries stakeholders and conservation practitioners behind a joint plan, removing a key obstacle to reaching sustainable conservation successes with economically important marine species."
 
-	</p>
-	
+<div class="wrapper col4">
+	<div class="overview">
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
 	</div>
 </div>
 <div class="w3-container w3-dark-grey">
-	<h1><center>Seasonal Calendar</center></h1>
+	<h1>&nbsp</h1>
 </div>
+<div class="bgimg-3">
+	<div class="caption">
+		<span class="border">News</span>
+	</div>
+</div>
+
 <div class="wrapper col4">
 	<div class="overview">
-<iframe src="https://calendar.google.com/calendar/embed?title=Fishing%20Events&amp;height=600&amp;wkst=1&amp;bgcolor=%23333333&amp;src=m0vgj2i5qrid0thgj262n22bmo%40group.calendar.google.com&amp;color=%238D6F47&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=America%2FDenver" style="border:solid 1px #777" width="1000" height="600" frameborder="0" scrolling="no"></iframe>
+		<h1>Latest Headline #1</h1>
+		<p>Boulder/Metro – High flows on most metro rivers has kept interest low for both winter steelhead and Willamette River sturgeon. Besides less than ideal river conditions, anchored anglers on the Willamette need to be cautious about floating and submersed trees that can get entangled in anchor lines and cause a dangerous boating situation. It’s best to wait until flows subside.
+		
+<img src="http://portlandtribune.com/images/artimg/00003563442555.jpg" align="right" height="400" width="300" hspace="50" vspace="50"/> 
+		<br>
+		
+With dropping snow levels, Sandy River anglers should start to see improved water conditions by the weekend. Catches of steelhead will likely remain slow until mid-December however.
+<br>
+Clackamas River steelheaders will also have to wait another few weeks before better opportunities arise, but the smaller Eagle Creek tributary fishery will clear faster, although steelhead don’t tend to enter this river in good number for another week or so. Small egg clusters often work best for early season anglers.
+
 <br>
 <br>
+The Tillamook Report – Coastal steelheaders were largely sidelined for much of the holiday weekend as torrential downpours kept rivers muddy and fish subdued. 12- year old Jackson Curran of Portland gets credit for the first confirmed take of a winter steelhead on the North Fork Nehalem River. Jackson was fishing with his dad Paul, who also hooked and lost a steelhead and landed a quality late-season Chinook. The hatchery reach, about 11 miles out of the town of Nehalem, is the most productive when flows are high. This area will be very popular for the next 5 weeks.
 <br>
+<br>
+When flows subside, the Kilchis and Wilson Rivers will also harbor late season Chinook as well as winter steelhead. Both rivers should fish by the weekend but realize we’re in the shoulder season for both species. Regardless, 2-fish limits are possible, just not likely.
+<br>
+<br>
+Further south, Three Rivers near Hebo should start to witness more consistent steelhead fishing. This smaller tributary to the Nestucca clears fast and has some good public access points for bank anglers. Small egg clusters and sand shrimp should produce results for persistent anglers. Like the North Fork Nehalem, this run will remain productive into the first week of January.
+<br>
+<br>
+Historically, Tillamook Bay itself has produced good Chinook catches into mid-December. With a slower than normal late season however, this won’t be the year to fish with confidence here. Regardless, the Ghost Hole and Bay City slots may produce a few late season Chinook, but effort is down.
+<br>
+<br>
+Coastal estuaries south of Tillamook Head near Seaside remain closed to Dungeness crabbing.
+<br>
+<br>
+
+Northwest Oregon – Located along Highway 30 east of Astoria, Big Creek and Gnat Creek offer up some great small stream steelheading opportunities. Although both have tracts of private land that doesn’t allow trespassing, public access is available if you look for it. Most anglers expend their time close to the hatcheries that produced these fish. Returning adults congregate in good numbers at these locations.
+<br>
+<br>
+The Klaskanine River is another north coast early season favorite that begins to produce this time of year. The Necanicum is also known for early season success with good bank access.
+<br>
+<br>
+Lower Columbia River crabbing remains productive, especially with the delay in the commercial crab opener, which typically takes place on December 1st.
+<br>
+<br>
+For a more detailed report, go to www.TheGuidesForecast.com
+<br>
+<br>
+Bob Rees is a sixth generation Oregonian and a 20-year veteran fishing guide of Oregon's Northwest region. Bob Rees' column, The Guide's Forecast, has been a trusted fishing resource for over 16 years and will appear in the Thursday edition of the Portland Tribune. He welcomes the opportunity to partner with the Portland Tribune to bring the sport fishing community timely and accurate fishing information so you can catch more fish!</p>
+	</div>
+</div>
+<div class="w3-container w3-dark-grey">
+	<h1>&nbsp</h1>
+</div>
+<div class="bgimg-4">
+	<div class="caption">
+		<span class="border">Seasonal Calendar</span>
+	</div>
+</div>
+
+<div class="wrapper col4">
+	<div class="overview">
+		<center><iframe src="https://calendar.google.com/calendar/embed?title=Local%20Fishing%20Events!&amp;height=600&amp;wkst=1&amp;bgcolor=%23999999&amp;src=m0vgj2i5qrid0thgj262n22bmo%40group.calendar.google.com&amp;color=%238D6F47&amp;ctz=America%2FDenver" style="border-width:0" width="1000" height="600" frameborder="0" scrolling="no"></iframe></center>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
 
 	</div>
 </div>
 
 <div class="wrapper col5">
-  <div id="footer">
+	<div id="footer">
     <div class="box1">
       <h2>Some information about us</h2>
-      <p>We are a group of developers who are passionate about fish.
-        Our goal is to centralize and consolidate fishing information, thereby 
-        increasing information accessibility and angler satisfaction. With an
-        interactive web page, users will be able to create profiles for themselves
-        and record information about fish caught at specific locations, discover
-        new fishing spots and search for rivers, streams and lakes containing
-        specific varieties of fish.</p>
+      <p>We are a group of developers who are passionate about fish. Our goal is to centralize and consolidate fishing information, thereby  increasing information accessibility and angler satisfaction. With an interactive web page, users will be able to create profiles for themselves and record information about fish caught at specific locations, discover new fishing spots and search for rivers, streams and lakes containing specific varieties of fish.</p>
     </div>
     <div class="box contactdetails">
-      <h2>Our Contact Details !</h2>
-      <ul>
-        <li>Company Name: Anglerpedia</li>
-        <li>Email: www.anglerpedia.us</li>
-		<li>University of Colorado Boulder</li>
-		<li>Regent Administrative Center</li>
-		<li>2055 Regent Drive, Rm. 101</li>
-		<li>Boulder, CO 80309-0020</li>
-      </ul>
-    </div>
+		<h2>Our Contact Details !</h2>
+		<ul>
+			<li>Company Name: Anglerpedia</li>
+			<li>Email: www.anglerpedia.us</li>
+			<li>University of Colorado Boulder</li>
+			<li>Regent Administrative Center</li>
+			<li>2055 Regent Drive, Rm. 101</li>
+			<li>Boulder, CO 80309-0020</li>
+		</ul>
+	</div>
     <div class="box flickrbox">
       <h2>Latest Catches!</h2>
-      <div class="wrap">
-        <div class="fix"></div>
-        <div class="flickr_badge_image"<a href="#"><img src="images/80x80.jpg" alt="" /></a></div>
-        <div class="flickr_badge_image"<a href="#"><img src="images/80x80.jpg" alt="" /></a></div>
-        <div class="flickr_badge_image"<a href="#"><img src="images/80x80.jpg" alt="" /></a></div>
-        <div class="flickr_badge_image"<a href="#"><img src="images/80x80.jpg" alt="" /></a></div>
-        <div class="flickr_badge_image"<a href="#"><img src="images/80x80.jpg" alt="" /></a></div>
-        <div class="flickr_badge_image"<a href="#"><img src="images/80x80.jpg" alt="" /></a></div>
-        <div class="fix"></div>
-      </div>
+		<div class="wrap">
+			<div class="fix"></div>
+			<div class="flickr_badge_image"<a href="#"><img src="images/80x80.jpg" alt="" /></a></div>
+			<div class="flickr_badge_image"<a href="#"><img src="images/80x80.jpg" alt="" /></a></div>
+			<div class="flickr_badge_image"<a href="#"><img src="images/80x80.jpg" alt="" /></a></div>
+			<div class="flickr_badge_image"<a href="#"><img src="images/80x80.jpg" alt="" /></a></div>
+			<div class="flickr_badge_image"<a href="#"><img src="images/80x80.jpg" alt="" /></a></div>
+			<div class="flickr_badge_image"<a href="#"><img src="images/80x80.jpg" alt="" /></a></div>
+			<div class="fix"></div>
+		</div>
     </div>
-    <br class="clear" />
-  </div>
+    <p>&nbsp;</p>
+	</div>
 </div>
 
 <div class="w3-container w3-black">
 	<p class="fl_left">Copyright &copy; 2016 - All Rights Reserved Anglerpedia</p>
-</div>
-  </div>
 </div>
 </body>
 </html>
