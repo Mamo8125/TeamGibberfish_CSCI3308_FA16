@@ -41,17 +41,17 @@
 		<span class="border">Map</span>
 	</div>
 </div>
-	 
+
 <div class="wrapper col4">
 	<div class="overview">
   <div id="map" style="width: 500px; height: 400px;"></div>
 
   <script type="text/javascript">
     var locations = [
-      ['Gross Reservoir <br> Salmon Trout Here <br> Dont judge me <br> hello world', 39.9510,-105.3614, 4, 'anglerpedia-marker.png'],
-      ['Boulder Reservoir', 40.0779,-105.2226, 3, 'anglerpedia-marker.png'],
-      ['North Boulder Creek', 40.0134,-105.2953, 2, 'anglerpedia-marker.png'],
-      ['Viele Lake', 39.9721,-105.2491, 1, 'anglerpedia-marker.png']
+      ['Gross Reservoir <br> Type: Lake <br> Lat: 39.9510, Long: -105.3614 <br> Fish: <a href="url">Brook Trout</a>, <a href="url">Cutthroat Trout</a>, <a href="url">Brown Trout</a>, <a href="url">Rainbow Trout</a>', 39.9510,-105.3614, 4, 'anglerpedia-marker.png'],
+      ['Boulder Reservoir <br> Type: Lake <br> Lat: 40.0779, Long: -105.2226 <br> Fish: <a href="url">Brook Trout</a>, <a href="url">Cutthroat Trout</a>, <a href="url">Brown Trout</a>, <a href="url">Rainbow Trout</a>', 40.0779,-105.2226, 3, 'anglerpedia-marker.png'],
+      ['North Boulder Creek <br> Type: River <br> Lat: 40.0134, Long: -105.2953 <br> Fish: <a href="url">Brook Trout</a>, <a href="url">Brown Trout</a>, <a href="url">Rainbow Trout</a>', 40.0134,-105.2953, 2, 'anglerpedia-marker.png'],
+      ['Viele Lake <br> Type: Lake <br> Lat: 39.9721, Long: -105.2491 <br> Fish: <a href="url">Brook Trout</a>, <a href="url">Cutthroat Trout</a>, <a href="url">Brown Trout</a>, <a href="url">Rainbow Trout</a>', 39.9721,-105.2491, 1, 'anglerpedia-marker.png']
 
     ];
 
@@ -65,7 +65,7 @@
 
     var marker, i;
 
-    for (i = 0; i < locations.length; i++) {  
+    for (i = 0; i < locations.length; i++) {
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         map: map,
@@ -81,26 +81,26 @@
     }
   </script>
 <center>
-<form  method="post" action="search.php?go"  id="searchform"> 
-	<input  type="text" name="name"> 
-	<input  type="submit" name="submit" value="Search"> 
+<form  method="post" action="search.php?go"  id="searchform">
+	<input  type="text" name="name">
+	<input  type="submit" name="submit" value="Search">
 </form>
 <p>&nbsp;</p>
 <table>
   <tr>
     <th>Fish</th>
     <th>Location</th>
-    <th>Wikipedia Link</th>
+    <th>Information Link</th>
   </tr>
   <tr>
-    <td>Gibberfish</td>
+    <td>Rainbow Trout</td>
     <td>Boulder</td>
-    <td>www.wikipedia.com/gibberfish</td>
+    <td><a href="https://en.wikipedia.org/wiki/Rainbow_trout">Fish Info</td>
   </tr>
   <tr>
-    <td>Nemo</td>
+    <td>Brown Trout</td>
     <td>Boulder</td>
-    <td>www.wikipedia.com/nemo</td>
+    <td><a href="https://en.wikipedia.org/wiki/Brown_trout">Fish Info</td>
   </tr>
 
 </table>
