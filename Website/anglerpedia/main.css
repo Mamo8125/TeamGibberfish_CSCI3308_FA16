@@ -104,8 +104,6 @@ width: 100%;
 }
 
 
-/* ----------------------------------------------Wrapper------------------------------------- */
-
 div.wrapper{
 	position:relative; 
 	float:left; 
@@ -145,8 +143,6 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 }
 
 
-/* ----------------------------------------------Generalise------------------------------------- */
-
 #header, #intro, .overview, #container, #footer{
 	position:relative; 
 	width: 960px;
@@ -169,8 +165,6 @@ img {
     padding: 3px;
 }
 
-
-/* ----------------------------------------------Header------------------------------------- */
 
 #header{
 	padding:0 0 20px 0;
@@ -207,8 +201,6 @@ img {
 	background-color:#333333;
 }
 
-/* ----------------------------------------------Homepage Intro------------------------------------- */
-
 #intro{
 	padding:20px 0 10px 0;
 }
@@ -243,10 +235,6 @@ img {
 	line-height:1.7em;
 }	
 
-
-
-/* ----------------------------------------------Page Overview------------------------------------- */
-
 div.overview{
 	padding:20px 0 0 0;
 }
@@ -264,9 +252,6 @@ div.overview{
 	padding:0; 
 	list-style:none;
 }
-
-
-/* ----------------------------------------------Footer------------------------------------- */
 
 #footer{
 	padding:15px 0;
@@ -292,9 +277,6 @@ div.overview{
 	width:400px; 
 	line-height:1.6em;
 }
-
-
-
 #footer .flickrbox .wrap .flickr_badge_image{
 	display:block; 
 	float:left; 
